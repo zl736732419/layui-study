@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>Layui初探</title>
+  <link rel="stylesheet" href="layui/css/layui.css">
+</head>
+<body>
+
+<div>
+<i class="layui-icon" style="font-size: 100px;">&#xe654;</i>
+<i class="layui-icon" style="font-size: 100px;">&#xe642;</i>
+<i class="layui-icon" style="font-size: 100px;">&#xe640;</i>
+<i class="layui-icon" style="font-size: 100px;">&#xe61f;</i>
+
+<i class="layui-icon" style="font-size: 100px;">&#xe602;</i>
+<i class="layui-icon" style="font-size: 100px;">&#xe603;</i>
+<i class="layui-icon" style="font-size: 100px;">&#xe619;</i>
+<i class="layui-icon" style="font-size: 100px;">&#xe61a;</i>
+
+<i class="layui-icon" style="font-size: 100px;">&#xe647;</i>
+<i class="layui-icon" style="font-size: 100px;">&#xe648;</i>
+<i class="layui-icon" style="font-size: 100px;">&#xe649;</i>
+</div>
+<div>
+	<div>
+		<button class="layui-btn">一个标准的按钮</button>
+		<a href="http://www.layui.com" class="layui-btn">一个可跳转的按钮</a>
+		<button class="layui-btn layui-btn-primary">原始</button>
+		<button class="layui-btn">默认</button>
+		<button class="layui-btn layui-btn-normal">百搭</button>
+		<button class="layui-btn layui-btn-warm">百搭</button>
+		<button class="layui-btn layui-btn-danger">百搭</button>
+		<button class="layui-btn layui-btn-disabled">百搭</button>
+	<div>
+	<div>
+		<button class="layui-btn layui-btn-big">大型</button>
+		<button class="layui-btn">默认</button>
+		<button class="layui-btn layui-btn-small">小型</button>
+		<button class="layui-btn layui-btn-mini">迷你</button>
+		<button class="layui-btn layui-btn-radius layui-btn">圆角</button>
+		<button class="layui-btn">
+		  <i class="layui-icon">&#xe608;</i> 添加
+		</button>
+		<button class="layui-btn layui-btn-small layui-btn-primary">
+		  <i class="layui-icon">&#x1002;</i>
+		</button>
+	</div>
+	<div>
+		<div class="layui-btn-group">
+		  <button class="layui-btn">增加</button>
+		  <button class="layui-btn">编辑</button>
+		  <button class="layui-btn">删除</button>
+		</div>
+		<div class="layui-btn-group">
+		  <button class="layui-btn">
+		    <i class="layui-icon">&#xe654;</i>
+		  </button>
+		  <button class="layui-btn">
+		    <i class="layui-icon">&#xe642;</i>
+		  </button>
+		  <button class="layui-btn">
+		    <i class="layui-icon">&#xe640;</i>
+		  </button>
+		  <button class="layui-btn">
+		    <i class="layui-icon">&#xe602;</i>
+		  </button>
+		</div>
+	</div>
+</div>
+
+
+
+<script src="layui/layui.js"></script>
+
+<script type="text/javascript">
+	layui.config({
+		/* layui.js所在目录,如果是单独引入无需配置 */
+		// dir: 'layui/', 
+		/* 
+		一般用于更新模块缓存，默认不开启。设为true即让浏览器不缓存。
+		也可以设为一个固定的值，如：201610
+		*/
+		version: 201707, 
+		/*
+		开启调试模式
+		*/
+		debug: true, 
+		base: 'scripts/modules/' // 拓展layui模块的目录，一般用于外部模块扩展,这里为用户自定义模块
+	});
+
+	// 引用模块
+	layui.use(['mystyle'], function(mystyle) {
+		mystyle.hello();
+	});
+</script>
+
+</body>
+</html>

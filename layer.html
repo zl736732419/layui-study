@@ -30,11 +30,8 @@
 	});
 
 	// 引用模块
-	layui.use(['mylayer', 'store', 'device'], 
-		function(mylayer, store, device) {
-		mylayer();
-		store();
-		device();
+	layui.use(['mylayer'], function(mylayer) {
+	    mylayer();
 	});
 </script>
 </body>

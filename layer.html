@@ -9,6 +9,7 @@
 <body>
  
 <!-- 你的HTML代码 -->
+<div id="mydiv" style="width:100px;height:200px; margin: 100px 100px; background-color:#ccc;"></div>
  
 <script src="layui/layui.js"></script>
 <!--layui入口脚本-->
@@ -31,7 +32,13 @@
 
 	// 引用模块
 	layui.use(['mylayer'], function(mylayer) {
-	    mylayer();
+	    // 提示
+//        mylayer.msg();
+//        mylayer.open();
+//        mylayer.load();
+//        mylayer.confirm();
+//        mylayer.alert();
+        mylayer.prompt();
 	});
 </script>
 </body>

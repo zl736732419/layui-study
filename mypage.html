@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Layui初探</title>
+    <link rel="stylesheet" href="layui/css/layui.css">
+</head>
+<body>
+
+<!-- 你的HTML代码 -->
+<div id="mypage"></div>
+<ul id="cities"></ul>
+
+<script src="layui/layui.js"></script>
+<!--layui入口脚本-->
+<script>
+    layui.config({
+        /* layui.js所在目录,如果是单独引入无需配置 */
+        // dir: 'layui/', 
+        /* 
+         一般用于更新模块缓存，默认不开启。设为true即让浏览器不缓存。
+         也可以设为一个固定的值，如：201610
+         */
+        version: 201707,
+        /*
+         开启调试模式
+         */
+        debug: true,
+        base: 'scripts/modules/' // 拓展layui模块的目录，一般用于外部模块扩展,这里为用户自定义模块
+    });
+    
+    // 引用模块
+    layui.use(['mypage'], function(mypage) {
+        console.info('mypage module');
+    });
+</script>
+</body>
+</html>
